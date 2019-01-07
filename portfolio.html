@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio | KEA Portfolio</title>
+    <meta name="author" content="Simon Erasmus Johansen">
+    <meta name="keywords" content="KEA,Portfolio,Simon Erasmus Johansen,cases,Multimedie,Designer">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" title="Home">
+            <picture>
+                <source media="(min-width: 900px)" srcset="img/logo_nr_keaPortfolio.svg">
+                <!--change to biggest files after 901px-->
+                <source media="(min-width: 450px)" srcset="img/logo_nr_keaPortfolio_medium.svg">
+                <!--change to medium files after 451px-->
+                <img id="logo" src="img/logo_nr_keaPortfolio_small.svg" alt="Image of a moth with the text NeedRent Kea Porfolio">
+            </picture>
+        </a>
+        <input type="checkbox" id="menuToggle">
+        <label id="burger" for="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About Simon/CV</a></li>
+            </ul>
+            <img src="img/logo_nr_keaPortfolio.svg" alt="big logo" />
+        </nav>
+    </header>
+    <section id="banner">
+            <picture>
+                <source media="(min-width: 900px)" srcset="img/pc_header.png">
+                <!--change to biggest files after 901px-->
+                <source media="(min-width: 450px)" srcset="img/tablet_header.png">
+                <!--change to medium files after 451px-->
+                <img id="bannerIMG" src="img/mobile_header.png" alt="Simon greeting you">
+            </picture>
+            <h1>1st semester portfolio
+            </h1>
+        </section>
+    <main>
+        <h3>Cases</h3>
+    <div id="myBtnContainer">
+        <div class="btn active" onclick="filterSelection('all')">Show all</div>
+        <div class="btn" onclick="filterSelection('theme01')">01 Basic Web</div>
+        <div class="btn" onclick="filterSelection('theme02')">02 Basic Content</div>
+        <div class="btn" onclick="filterSelection('theme03')">03 Basic Animation</div>
+        <div class="btn" onclick="filterSelection('theme04')">04 Basic UX</div>
+        <div class="btn" onclick="filterSelection('ani')">Animation</div>
+        <div class="btn" onclick="filterSelection('ux')">UX</div>
+        <div class="btn" onclick="filterSelection('docu')">Documentation</div>
+    </div>
+    <div id="galleryContainer">
+        <a class="filterDiv theme01" href="/subpage/basic-web-responsiveWebsite.html">
+            <article class="portContainer">
+                <h2>01 Basic Web</h2>
+                <h3>Responsive website</h3>
+                <img src="img/bw_thump010401.jpg" alt="Saul Bass and the poster Psyco blened together">
+                <p>Here are a teaser</p>
+                <p class="casesMore">See the whole project</p>
+            </article>
+        </a>
+                <a class="filterDiv theme02 ani docu" href="#">
+            <article class="portContainer">
+                <h2>02 Basic Content</h2>
+                <h3>Xd Prototype</h3>
+                <img src="img/test001.jpeg" alt="test">
+                <p>Here are a teaser</p>
+                <p class="casesMore">See the whole project</p>
+            </article>
+        </a>
+                <a class="filterDiv theme03 ani" href="#">
+            <article class="portContainer">
+                <h2>03 Basic Animation</h2>
+                <h3>Simple Animation</h3>
+                <img src="img/test001.jpeg" alt="test">
+                <p>Here are a teaser</p>
+                <p class="casesMore">See the whole project</p>
+            </article>
+        </a>
+                <a class="filterDiv theme04 docu" href="#">
+            <article class="portContainer">
+                <h2>04 Basic UX</h2>
+                <h3>Design Sprint</h3>
+                <img src="img/test001.jpeg" alt="test">
+                <p>Here are a teaser</p>
+                <p class="casesMore">See the whole project</p>
+            </article>
+        </a>
+                        <a class="filterDiv ux" href="#">
+            <article class="portContainer">
+                <h2>01 Basic Web</h2>
+                <h3>Responsive website</h3>
+                <img src="img/test001.jpeg" alt="test">
+                <p>Here are a teaser</p>
+                <p class="casesMore">See the whole project</p>
+            </article>
+        </a>
+    </div>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+    </main>
+   <footer>
+        <p>Portfolio for Simon Erasmus Johansen made for the Multimedie Designer education on Copenhagen Business School (KEA)</p>
+        <ul id="sitemap">
+            <li class="siteHead">
+                Sitemap</li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/portfolio.html">Portfolio</a></li>
+                <li class="siteThemes"><a href="/portfolio.html">- 01 Basic Web</a></li>
+                    <li><a href="/subpage/basic-web-responsiveWebsite.html">-- 01.04.01 Responsive website</a></li>
+            <li class="siteThemes"><a href="/portfolio.html">- 02 Basic Content</a></li>
+                    <li><a href="/subpage/basic-content-xdPrototype.html">-- 02.01.02 Xd prototype</a></li>
+                    <li><a href="/subpage/basic-content-storyWithoutWords.html">-- 02.01.03 Story without Words</a></li>
+                    <li><a href="/subpage/basic-content-microsite.html">-- 02.01.05 Treatment</a></li>
+                    <li><a href="/subpage/basic-content-microsite.html">-- 02.01.08 Documentation</a></li>
+                    <li><a href="/subpage/basic-content-microsite.html">-- 02.01.09 Microsite</a></li>
+                <li class="siteThemes"><a href="/portfolio.html">- 03 Basic Animation</a></li>
+                    <li><a href="/subpage/basic-animation-simpleAnimation.html">-- 03.01.02 Simple Animation</a></li>
+                    <li><a href="/subpage/basic-animation-weekSubmission.html">-- 03.02.01 Week submission</a></li>
+                    <li><a href="/subpage/basic-animation-interactiveAnimation.html">-- 03.03.02 Interactive Animation</a></li>
+                    <li><a href="/subpage/basic-animation-projectPool.html">-- 03.03.03 Project Pool day 1</a></li>
+                    <li><a href="/subpage/basic-animation-projectPool.html">-- 03.03.04 Project Pool day 2</a></li>
+                    <li><a href="/subpage/basic-animation-animatedStory.html">-- 03.04.05 Animated Story</a></li>
+                    <li><a href="/subpage/basic-animation-animatedStory.html">-- 03.04.06 Documentation</a></li>
+                <li class="siteThemes"><a href="/portfolio.html">- 04 Basic UX</a></li>
+                    <li><a href="/subpage/basic-ux-designSprint.html">-- 04.02.01 Design Sprint</a></li>
+                    <li><a href="/subpage/basic-ux-designSprint.html">-- 04.03.01 Web Prototype</a></li>
+                    <li><a href="/subpage/basic-ux-nativeApp.html">-- 04.04.01 Design Sprint: Native App</a></li>
+                    <li><a href="/subpage/basic-ux-nativeApp.html">-- 04.04.02 Theme document</a></li>
+            <li><a href="/about.html">About/CV</a></li>
+        </ul>
+        <p>Copyright © 2019
+            Simon Erasmus Johansen
+            NeedRent.dk - Kagsåkollegiet 97, 2860 Søborg</p>
+    </footer>
+
+</body>
+
+</html>

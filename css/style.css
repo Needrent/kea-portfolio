@@ -1,0 +1,463 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+/* Mobile + iOS fix for the menu*/
+body,html{
+    position: relative;
+    overflow-x: hidden;
+}
+h1,h2,h3,h4,p,a,.siteHead, li{
+    font-family: sans-serif;
+}
+p{
+    margin: 0 0 1.5rem 0;
+}
+h1{
+    font-size: 8rem;
+    line-height: 6.67rem;
+}
+h2,h3,.siteHead,h4{
+    font-size: 5rem;
+    line-height: 4.17rem;
+}
+h1,h2,h3{
+    text-align: center;
+}
+h3{
+    text-transform: uppercase;
+    margin: 10rem 0 3rem 0;
+}
+a, a:visited{
+    text-decoration: none;
+    color: white;
+    border-bottom: 0.1rem solid;
+    transition: 0.5s;
+}
+a:hover, a:active{
+    color: goldenrod !important;
+}
+.blackLinks, .blackLinks:visited{
+    color: black;
+}
+main a {
+    margin: 0 auto 3rem auto;
+    display: table;
+}
+a,p,#sitemap,.cv li,#subContent h4{
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+header,footer{
+    background: black;
+    width: calc(100% - 3rem);
+    padding: 1.5rem;
+}
+li span {
+    font-size: 1.5rem;
+    display: block;
+    font-weight: bold;
+    color: gray;
+}
+/*--------------------------------------- Header*/
+header{
+    height: calc(6rem - 3rem);
+    position: fixed;
+    z-index: 9999;
+}
+#logo{
+    height: 100%;
+    display: inline;
+}
+#logo a{
+        border-bottom: none !important;
+}
+/*--------------------------------------- Menu*/
+/* Menu content */
+#menu ul{
+    list-style: none;
+    margin: 5rem 0 0 0;
+}
+#menu li {
+    margin: 0 0 5rem 0;
+}
+#menu a,#menu a:visited {
+    font-size: 4rem;
+    margin: 0 0 1rem 0;
+    padding: 1rem 0 1rem 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+#menu img {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    width: calc(100% - 3rem);
+}
+#menu{
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 6rem);
+    background: black;
+    z-index: 9999;
+    top: 6rem;
+    left: 0;
+    transform: translateX(100%);
+    transition: 0.5s;
+    text-align: center;
+    /*display: none;*/
+}
+#menuToggle{display: none;} /* removed the checkbox, making the label the controller */
+#menuToggle:checked ~ #menu{
+   transform: translateX(0);
+       /* display: block;*/
+}
+#menuToggle:checked ~ #logo{
+    opacity: 0;
+}
+/* burger icon*/
+#burger{
+    width: 3rem;
+    height: 3rem;
+    float: right;
+    position: relative;
+}
+#burger span{
+    width: 3rem;
+    height: 0.5rem;
+    background: white;
+    display: block;
+    margin: 0 0 0.3rem 0;
+    transition: 0.5s;
+    transform-origin: 62% 50%;
+    position: relative;
+    border-radius: 1rem;
+}
+#menuToggle:hover ~ #burger span,#menuToggle:active ~ #burger span{
+    background: goldenrod;
+}
+/* hide middle lines*/
+#menuToggle:checked ~ #burger span:nth-child(2), #menuToggle:checked ~ #burger span:nth-child(3){
+    opacity: 0;
+}
+#menuToggle:checked ~ #burger span:nth-child(1){
+    transform: rotate(45deg);
+    top: 50%;
+    transition-delay: 0.1s
+}
+#menuToggle:checked ~ #burger span:nth-child(4){
+    transform: rotate(-45deg);
+    top: -50%;
+    transition-delay: 0.1s
+}
+/*--------------------------------------- Content*/
+main{
+    margin: 6rem auto 0 auto;
+    width: calc(100% - 3rem);
+}
+#mainPage{
+    width: 100%;
+    margin: 6rem 0 0 0;
+}
+#banner{
+    position: relative;
+    height: calc(100vh - 6rem);
+    width: 100%;
+}
+#banner h1,#banner h2, #bannerIMG{
+    position: absolute;
+    color: white;
+    /*mix-blend-mode: overlay;*/
+}
+#bannerIMG{
+        width: 100%;
+}
+#banner h1 {
+    top: 20%;
+    left: 1.5rem;
+    right: 1.5rem
+}
+#banner h2 {
+    top: 35%;
+    left: 1.5rem;
+    right: 1.5rem;
+}
+/* cases */
+.cases, cases img{
+    width: 100%;
+}
+.cases{
+    width: 100%;
+    height: 39rem;
+    position: relative;
+}
+.cases h4{
+    position: absolute;
+    top: 17%;
+    font-size: 5rem;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+.cases img{
+    height: 39rem;
+    overflow: hidden;
+}
+.casesMore{
+    background: rgba(0,0,0,0.8);
+    width: calc(100% - 3rem);
+    height: 3rem;
+    padding: 1.5rem;
+    text-align: center;
+    float: left;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    line-height: 3rem;
+    margin: 0;
+}
+.casesMore::after{
+    content: '';
+    /*width: 4.5rem;*/
+    /*height: 6rem;*/
+    /*background: black;*/
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    border-top: 1.5rem solid transparent; /*height*/
+    border-bottom: 1.5rem solid transparent;/*height*/
+    border-left: 2.5rem solid white; /*width*/
+
+}
+/*------------------------------CV timeline*/
+.cv{
+    border-left: 0.5rem solid #000;
+    margin: 0 3rem 1.5rem 3rem;
+}
+.cvCats{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    line-height: 1.5rem;
+    color: white;
+    background: black;
+    text-transform: uppercase;
+    display: inline-block;
+    transform: rotate(-5deg);
+}
+.cv li{
+    list-style: none;
+    text-indent: 1rem;
+    margin: 0 0 0.5rem 2.2rem;
+}
+.cvBullet{
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    border: none;
+    border-radius:1rem; /*For round bullet*/
+    background-color: #000;
+    margin: 0 1.5rem 0 -4.425rem; /* 0 [space from letters] 0 [centering on backline] */
+}
+.cvSubList{
+    list-style: none;
+}
+.cvSubLine{
+    display: inline-block;
+    border: none;
+    width: 4rem;
+    height: 0.5rem;
+    background-color: #000;
+    margin: 0 3rem 0.8rem -3.2rem;/* 0 [length of bullet] [centering of line] [space from line] */
+}
+/*--------------------------------------- Porfolio*/
+.btn {
+    font-size: 1.6rem;
+    float: left;
+    padding: 1rem;
+    background: black;
+    color: white;
+    font-family: sans-serif;
+    margin: 0 0.5rem 0.5rem 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.btn:hover{
+    background: #353535;
+    color: goldenrod;
+}
+.active{
+    background: #353535;
+    color: goldenrod;
+    font-weight: bold;
+}
+.show {
+  display: block !important;
+}
+#myBtnContainer{
+    width: 100%;
+    margin: 0 0 1.5rem 0;
+    float: left;
+}
+#galleryContainer{
+    width: 100%;
+    margin: 0 0 3rem 0;
+    position: relative;
+}
+.filterDiv{
+    width: 100%;
+    display: none;
+}
+#galleryContainer a{
+    float: left !important;
+    margin: 0;
+}
+.portContainer{
+    position: relative;
+    width: 100%;
+    background: black;
+    float: left;
+    margin: 0 0 1.5rem 0 !important;
+}
+.portContainer .casesMore{
+    position: static;
+    margin: 0;
+    font-size: 2rem;
+}
+.portContainer img{
+    width: 100%;
+}
+.portContainer h2{
+    font-size: 1.6rem;
+    text-align: left;
+    margin: 0 1.5rem 0 1.5rem;
+}
+.portContainer h3{
+    font-size: 2rem;
+    text-align: left;
+    margin: -2rem 1.5rem 0 1.5rem;
+}
+.portContainer p{
+    font-size: 1.6rem;
+    margin: 0 1.5rem 0 1.5rem;
+}
+/* subpage */
+.back{
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding: 1.5rem;
+    width: calc(100% - 3rem);
+    text-align: center;
+    background: black;
+    margin: 6rem 0 0 0;
+    display: block;
+    text-transform: uppercase;
+    position: fixed;
+    border-top: solid 0.2rem white;
+    z-index: 9999;
+}
+.back a{
+    margin: 0 0 0 2rem;
+}
+.back::before{
+    content: '';
+    position: absolute;
+    bottom: 28%;
+    left: 1.5rem;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    border-right: 2rem solid white;
+}
+#subpage{
+    width: calc(100% - 3rem);
+    margin: 13.5rem auto 1.5rem auto;
+}
+#subpage h1,
+#subpage h2{
+    color: black;
+}
+#subpage h1{
+    font-size: 2rem;
+    line-height: 2rem;
+}
+#subpage h2{
+    font-size: 3rem;
+    line-height: 3.2rem;
+    text-transform: uppercase;
+}
+#thumpnail{
+    position: relative;
+    width: 100%;/*41.4rem;*/
+    height: 33.8rem;
+    overflow: hidden;
+}
+.more{
+    background: rgba(0,0,0,0.8);
+    width: calc(100% - 3rem);
+    height: 3rem;
+    padding: 1.5rem;
+    text-align: center;
+    float: left;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    line-height: 3rem;
+    margin: 0;
+}
+.more::after{
+    content: '';
+    /*width: 4.5rem;*/
+    /*height: 6rem;*/
+    /*background: black;*/
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    border-top: 1.5rem solid transparent; /*height*/
+    border-bottom: 1.5rem solid transparent;/*height*/
+    border-left: 2.5rem solid white; /*width*/
+
+}
+#subContent h4{
+    /*
+    Paragraph
+    font-size: 2rem;
+    line-height: 2.4rem;
+
+    margin-bottom: 1.5rem; //Line change
+
+
+    */
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    margin: 0.938rem 0 0.462rem 0;
+    /* p size x 2 = 4rem - 2.6rem =
+        1.4rem * 0,33 = below
+        1.4rem * 0,67 = above
+    */
+}
+iframe{
+    width: 100%;
+}
+
+/*--------------------------------------- Footer*/
+footer{
+    float: left;
+    margin: 3rem 0 0 0;
+}
+footer p{
+    color: white;
+    margin: 1.5rem 0 3rem 0;
+}
+/* sitemap */
+#sitemap{
+    list-style: none;
+    color: white;
+}
+.siteHead{
+    margin: 1.5rem 0 1.5rem 0;
+}
+.cvHead{
+    margin-top:1.5rem;
+}
