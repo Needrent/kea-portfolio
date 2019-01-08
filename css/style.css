@@ -43,8 +43,13 @@ a, a:visited{
 a:hover, a:active{
     color: #35687b !important;
 }
-.blackLinks, .blackLinks:visited{
+.blackLinks, .blackLinks:visited {
     color: black;
+    text-align: center;
+    /* margin: auto; */
+    display: inherit;
+    border-bottom: none;
+    text-decoration: underline;
 }
 main a {
     margin: 0 auto 3rem auto;
@@ -647,14 +652,7 @@ top: 25% !important;
     /* column-gap: 1.5rem; */
     position: relative;
 }
-    .blackLinks, .blackLinks:visited {
-    color: black;
-    text-align: center;
-    /* margin: auto; */
-    display: inherit;
-    border-bottom: none;
-    text-decoration: underline;
-}
+
     /*portfolio*/
     #galleryContainer {
     columns: 4;
