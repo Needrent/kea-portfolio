@@ -41,14 +41,13 @@ a, a:visited{
     transition: 0.5s;
 }
 a:hover, a:active{
-    color: goldenrod !important;
+    color: #35687b !important;
 }
 .blackLinks, .blackLinks:visited{
     color: black;
 }
 main a {
     margin: 0 auto 3rem auto;
-    display: table;
 }
 a,p,#sitemap,.cv li,#subContent h4{
     font-size: 2rem;
@@ -69,7 +68,7 @@ li span {
 header{
     height: calc(6rem - 3rem);
     position: fixed;
-    z-index: 9999;
+    z-index: 9998;
 }
 #logo{
     height: 100%;
@@ -142,7 +141,7 @@ header{
     border-radius: 1rem;
 }
 #menuToggle:hover ~ #burger span,#menuToggle:active ~ #burger span{
-    background: goldenrod;
+    background: #35687b;
 }
 /* hide middle lines*/
 #menuToggle:checked ~ #burger span:nth-child(2), #menuToggle:checked ~ #burger span:nth-child(3){
@@ -296,11 +295,11 @@ main{
 }
 .btn:hover{
     background: #353535;
-    color: goldenrod;
+    color: #35687b;
 }
 .active{
     background: #353535;
-    color: goldenrod;
+    color: #35687b;
     font-weight: bold;
 }
 .show {
@@ -484,4 +483,195 @@ footer p{
 }
 .cvHead{
     margin-top:1.5rem;
+}
+/*----------------------------------------------Media*/
+@media (min-width: 768px)/*Tablet size*/{
+#banner h1 {
+top: 25% !important;
+}
+#banner h2 {
+    top: 50%;
+    left: 20%;
+    right: 20%;
+}
+    #banner {
+    position: relative;
+    height: 38.1rem;
+    width: 100%;
+    overflow: hidden;
+}
+    main{
+        width: 95% !important;
+    }
+#mainPage {
+    width: 100%;
+    margin: 6rem 1.5rem 0 1.5rem;
+    columns: 3;
+    column-gap: 1.5rem;
+    position: relative;
+}
+#mainPage h3 {
+    position: absolute;
+    top: -15%;
+    left: 0;
+    right: 0;
+}
+#mainPage a {
+    float: left;
+    width: 45%;
+}
+    #mainPage a{
+    width: 100%;
+}
+    .cases{
+        height: auto;
+    }
+    .cases img {
+    width: 100%;
+        height: auto;
+    overflow: visible;
+}
+    .cases h4 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+    .casesMore {
+    bottom: -1rem;
+    position: relative;
+    margin: -2rem 0 0 0;
+    font-size: 1.5rem !important;
+}
+    /*nav*/
+    #burger{
+    display: none;
+    }
+    #menu img{
+        display: none;
+    }
+#menu {
+    position: fixed;
+    top: 1.2rem;
+    left: 39%;
+    transform: translateX(0);
+    height: 6rem;
+    width: 61%;
+    background: none;
+    text-align: right;
+}
+    #menu a, #menu a:visited {
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+        color: white;
+    }
+    #menu ul {
+    margin: 1.5rem 0 0 0;
+}
+    #menu li {
+    margin: 0 1.5rem 0 0;
+    display: inline-block;
+}
+    #menu a{
+        padding: 0;
+    }
+/*-----------------------------------Portfolio*/
+    /*box*/
+    #galleryContainer{
+        columns: 2;
+        column-gap: 1.5rem;
+    }
+    /*box*/
+    .portContainer{
+        break-inside: avoid;
+    }
+    #portfolio {
+    columns: 1;
+    width: 93% !important;
+}
+/*-----------------------------------subpage*/
+    main {
+    margin: 10rem auto 0 auto;
+    width: 75%;
+    column-count: 2;
+    column-gap: 1.5rem;
+    break-inside: avoid;
+}
+    main h3:first-of-type {
+    margin-top: 0;
+}
+    .back {
+        width: auto;
+        padding: 1.5rem 1.5rem 1.5rem 4.5rem;
+    }
+    #subpage {
+    width: 39%;
+    float: left;
+}
+#thumpnail {
+    position: relative;
+    width: auto;
+    height: 33.8rem;
+    overflow: hidden;
+    /* float: left; */
+    margin: 6rem 0 0 0;
+}
+
+/*-----------------------------------footer*/
+    footer{
+        column-count: 3;
+        column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px)/*Big Tablet size*/{
+        .large{
+        display: none;
+    }
+}
+@media (min-width: 1200px)/*Laptop*/{
+    h3 {
+    text-transform: uppercase;
+    margin: 4.6rem 0 3rem 0;
+}
+    footer {
+    column-count: 3;
+    column-gap: 1.5rem;
+    width: 55%;
+    padding: 1.5rem 22.5% 1.5rem 22.5%;
+}
+    #mainPage {
+    width: 55% !important;
+    margin: 6rem 22.5% 0 22.5%;
+    columns: 3;
+    /* column-gap: 1.5rem; */
+    position: relative;
+}
+    .blackLinks, .blackLinks:visited {
+    color: black;
+    text-align: center;
+    /* margin: auto; */
+    display: inherit;
+    border-bottom: none;
+    text-decoration: underline;
+}
+    /*portfolio*/
+    #galleryContainer {
+    columns: 4;
+    column-gap: 1.5rem;
+    break-inside: avoid;
+}
+    /* subpage */
+
+    main {
+    margin: 1.5rem auto 0 auto;
+    width: 75%;
+    column-count: 4;
+    column-gap: 1.5rem;
+    break-inside: avoid;
+}
+
+    #subpage h2 {
+    font-size: 6rem;
+    line-height: 6.2rem;
+}
 }

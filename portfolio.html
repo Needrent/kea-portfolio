@@ -29,7 +29,7 @@
 
 <body>
     <header>
-        <a href="index.html" title="Home">
+        <a href="/index.html" title="Home">
             <picture>
                 <source media="(min-width: 900px)" srcset="img/logo_nr_keaPortfolio.svg">
                 <!--change to biggest files after 901px-->
@@ -47,25 +47,25 @@
         </label>
         <nav id="menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About Simon/CV</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/portfolio.html">Portfolio</a></li>
+                <li><a href="/about.html">About Simon/CV</a></li>
             </ul>
-            <img src="img/logo_nr_keaPortfolio.svg" alt="big logo" />
+            <img src="/img/logo_nr_keaPortfolio.svg" alt="big logo" />
         </nav>
     </header>
     <section id="banner">
             <picture>
-                <source media="(min-width: 900px)" srcset="img/pc_header.png">
+                <source media="(min-width: 1024px)" srcset="img/pc_header.jpg">
                 <!--change to biggest files after 901px-->
-                <source media="(min-width: 450px)" srcset="img/tablet_header.png">
+                <source media="(min-width: 768px)" srcset="img/tablet_header.jpg">
                 <!--change to medium files after 451px-->
                 <img id="bannerIMG" src="img/mobile_header.png" alt="Simon greeting you">
             </picture>
             <h1>1st semester portfolio
             </h1>
         </section>
-    <main>
+    <main id="portfolio">
         <h3>Cases</h3>
     <div id="myBtnContainer">
         <div class="btn active" onclick="filterSelection('all')">Show all</div>
@@ -75,7 +75,7 @@
         <div class="btn" onclick="filterSelection('theme04')">04 Basic UX</div>
         <div class="btn" onclick="filterSelection('ani')">Animation</div>
         <div class="btn" onclick="filterSelection('vid')">Video</div>
-        <div class="btn" onclick="filterSelection('docu')">Documentation</div>
+        <div class="btn" onclick="filterSelection('doc')">Documentation</div>
         <div class="btn" onclick="filterSelection('ux')">UX/Prototypes</div>
         <div class="btn" onclick="filterSelection('css')">CSS &amp; HTML</div>
         <div class="btn" onclick="filterSelection('js')">JavaScript</div>
@@ -219,7 +219,6 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 </script>
-
     </main>
     <footer>
         <p>Portfolio for Simon Erasmus Johansen made for the Multimedie Designer education on Copenhagen Business School (KEA)</p>
