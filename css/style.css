@@ -606,6 +606,7 @@ top: 25% !important;
     #subpage {
     width: 39%;
     float: left;
+
 }
 #thumpnail {
     position: relative;
@@ -669,7 +670,6 @@ top: 25% !important;
     column-gap: 1.5rem;
     break-inside: avoid;
 }
-
     #subpage h2 {
     font-size: 6rem;
     line-height: 6.2rem;
